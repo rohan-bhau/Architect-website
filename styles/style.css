@@ -11,6 +11,13 @@
 .display-flex{
     display: flex;
 }
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+main > section{
+    margin-top: 130px;
+}
 /* light background */
 .bg-light{
     background-color: rgba(255, 144, 14, 0.1);
@@ -23,6 +30,15 @@
 .gray{
     color:#727272
 }
+/* dark 03*/
+.dark{
+    color: rgba(19, 19, 19, 1);
+}
+/* orange */
+.orange{
+    color: #FF900E;
+}
+
 .primary-btn{
     background-color: #FF900E;
     color: white;
@@ -79,10 +95,54 @@
     width: 100%;
 }
 
+/* teams and features related styles */
+.teams{
+    align-items: center;
+}
+
+.team-image-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+.our-features{
+    margin-left: 73px;
+    max-width: 537px;
+}
+.features-title{
+    font-size: 2.75rem;
+    font-weight: 700;
+}
+#quick-list{
+    font-weight: 500;
+}
+
+.features-description{
+    margin-top: 24px;
+}
+.our-features button{
+    margin-top: 32px;
+}
 /* Responsive media query */
-/* @media screen and (max-width: 576px;) {
-    .navbar, .nav-links{
+@media screen and (max-width: 576px) {
+    .navbar, .nav-links, .teams{
         flex-direction: column;
     }
-    
-} */\
+
+.team-image-container{
+    grid-template-columns: repeat(1,1fr);
+}
+.our-features{
+    margin-left: 20px;
+}
+}
+
+/* medium devices */
+@media screen and (min-width: 577px) and (max-width: 992px) {
+.teams{
+    flex-direction: column;
+}    
+.our-features{
+    margin: 50px auto;
+}
+}
